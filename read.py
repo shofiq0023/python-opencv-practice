@@ -11,22 +11,17 @@ import cv2 as cv
 capture = cv.VideoCapture('videos/dog.mp4');
 
 # To capture with web cam. 0, 1, 2, 3 indicates the camera connected to your device
-capture = cv.VideoCapture(0);
+# capture = cv.VideoCapture(0)
 
 while True:
 	isTrue, frame = capture.read()
 	cv.imshow("video", frame)
 
-	if cv.waitKey(20) & 0xFF==ord("d"):
+	if cv.waitKey(20) & 0xFF==ord("s"):
 		break
 
 capture.release()
 cv.destroyAllWindows()
 
 
-################### Resizing images and video ###################
-# img = cv.imread("images/boy.jpg")
 
-# cv.imshow("Boy", img)
-
-# cv.waitKey(0)
